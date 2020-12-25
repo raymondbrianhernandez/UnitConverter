@@ -66,41 +66,21 @@ double englishCalc(double amount, string initialUnit, string resultingUnit)
     double num = 0;
 
     // CONVERT TO CM FIRST
-    if (initialUnit == "mm" )
-    {   num = amount / 10;}
-
-    if (initialUnit == "cm")
-    {   num = amount;}
-
-    if (initialUnit == "m")
-    {   num = amount / 0.01;}
-
-    if (initialUnit == "km")
-    {   num = amount / 0.00001;}
-
+    if (initialUnit == "mm") { num = amount / 10; }
+    if (initialUnit == "cm") { num = amount; }
+    if (initialUnit == "m") { num = amount / 0.01; }   
+    if (initialUnit == "km") { num = amount / 0.00001; }
 
     // FROM CM TO ENGLISH
-    if (resultingUnit == "inches" )
-    {   num = num * 0.3937007874;}
-
-    if (resultingUnit == "feet")
-    {   num = num * 0.032808399;}
-
-    if (resultingUnit == "yards")
-    {   num = num * 0.010936133;}
-
-    if(resultingUnit == "miles")
-    {   num = num * 0.0000062137;}
+    if (resultingUnit == "inches") { num = num * 0.3937007874; }
+    if (resultingUnit == "feet") { num = num * 0.032808399; }
+    if (resultingUnit == "yards") { num = num * 0.010936133; }
+    if(resultingUnit == "miles") { num = num * 0.0000062137; }
 
     // FROM CM TO ANY METRIC
-    if (resultingUnit == "mm" )
-    {   num = num * 10;}
-
-    if (resultingUnit == "m")
-    {   num = num * 0.01;}
-
-    if(resultingUnit == "km")
-    {   num = num * 0.00001;}
+    if (resultingUnit == "mm") { num = num * 10; }
+    if (resultingUnit == "m") { num = num * 0.01; }
+    if(resultingUnit == "km") { num = num * 0.00001; }
 
     return num;
 }
@@ -110,41 +90,21 @@ double metricCalc(double amount, string initialUnit, string resultingUnit)
     double num = 0;
 
     // CONVERT TO INCHES
-    if (initialUnit == "inches" )
-    {   num = amount;}
-
-    if (initialUnit == "feet")
-    {   num = amount * 12;}
-
-    if (initialUnit == "yards")
-    {   num = amount * 36;}
-
-    if (initialUnit == "miles")
-    {   num = amount * 63360;}
-
+    if (initialUnit == "inches") { num = amount; }
+    if (initialUnit == "feet") { num = amount * 12; }
+    if (initialUnit == "yards") { num = amount * 36; }
+    if (initialUnit == "miles") { num = amount * 63360; }
 
     // INCHES TO METRIC
-    if (resultingUnit == "cm" )
-    {   num = num * 2.54;}
-
-    if (resultingUnit == "mm")
-    {   num = num * 25.4;}
-
-    if (resultingUnit == "m")
-    {   num = num * .0254;}
-
-    if(resultingUnit == "km")
-    {   num = num * .0000254;}
+    if (resultingUnit == "cm" ) { num = num * 2.54; }
+    if (resultingUnit == "mm") { num = num * 25.4; }
+    if (resultingUnit == "m") { num = num * .0254; }
+    if(resultingUnit == "km") { num = num * .0000254; }
 
     // INCHES TO ENGLISH
-    if (resultingUnit == "feet")
-    {   num = num * 0.0833333333; }
-
-    if (resultingUnit == "yards")
-    {   num = num * 0.0277777778;}
-
-    if(resultingUnit == "miles")
-    {   num = num * 0.0000157828;}
+    if (resultingUnit == "feet") { num = num * 0.0833333333; }
+    if (resultingUnit == "yards") { num = num * 0.0277777778; }
+    if(resultingUnit == "miles") { num = num * 0.0000157828; }
 
     return num;
 }
